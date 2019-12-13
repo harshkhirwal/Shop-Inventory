@@ -14,3 +14,11 @@ router.get('/', (req, res, next) => {
     });
   });
 });
+
+router.get('/dashboard', function(req,res){
+  res.render("dashboard");
+});
+
+router.get('/dashboard/add', function(req,res){
+  res.render("addItem");
+});
