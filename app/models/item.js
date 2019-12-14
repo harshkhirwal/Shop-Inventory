@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
 
-  const Itemlist = sequelize.define('Itemlist', {
+  const Itemlists = sequelize.define('Itemlists', {
   itemID: {
      type: DataTypes.STRING ,
-     primaryKey: true,
+     primaryKey: true
   },
   itemName: DataTypes.STRING
   }, {
@@ -16,5 +16,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 
-  return Itemlist;
+  return Itemlists;
 };

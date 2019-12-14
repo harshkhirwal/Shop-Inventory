@@ -6,14 +6,14 @@ module.exports = (app) => {
   app.use('/', router);
 };
 
-router.get('/dashboard/add', function(req,res){
+router.get('/dashboard/additem', function(req,res){
   res.render("addItem");
 });
 
-router.post('/dashboard/add', function(req,res){
+router.post('/dashboard/additem', function(req,res){
   console.log(req.body.itemName);
-  db.item.create({
-  itemName: req.body.itemName,
-  itemID : req.body.itemName
+    console.log(req.body);
+  db.itemlistss.create({
+  itemName: req.body.itemName
 });
 });
