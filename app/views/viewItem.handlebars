@@ -1,0 +1,16 @@
+<div ng-controller="subject1">
+
+</div>
+
+
+
+<script type="text/javascript">
+    app.controller("subject1", function($scope) {
+      $.get("/api/v1/item/all",function(data){
+        console.log(data);
+        // $scope.subjectList = data;
+        // $scope.$apply();
+      });
+    });
+
+</script>

@@ -7,18 +7,21 @@ module.exports = (app) => {
 };
 
 router.get('/', (req, res, next) => {
-  db.Article.findAll().then((articles) => {
-    res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
-    });
-  });
+
 });
 
 router.get('/dashboard', function(req,res){
   res.render("dashboard");
 });
 
-router.get('/dashboard/add', function(req,res){
+router.get('/dashboard/additem', function(req,res){
   res.render("addItem");
+});
+
+router.get('/item/view', function(req,res){
+  res.render("viewitem");
+});
+
+router.get('/dashboard/addbrand', function(req,res){
+  res.render("addBrand");
 });
